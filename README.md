@@ -4,7 +4,13 @@
 Hello World
 
 ### W2
-Create future Devlog sub-headers with the three # symbols, then write your Devlogs below them.
+Why are the r, g, and b variables floats instead of ints, bools, or strings?
+They are floats so the color changes can we more precise.
+Why is the _bounce variable an int instead of a float, bool, or string?
+It is an int because it is a whole number.
+The error you got after Step X of Part 2 told you something useful about why that line of code was broken- what was it?
+The line of code was broken because of the ;
+
 
 ## Open-Source Assets
 ### W1
