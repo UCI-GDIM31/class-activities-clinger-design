@@ -22,7 +22,7 @@ public class Ball : MonoBehaviour
         //_bounces + 1
         //_bounces --;
         //_bounces++;
-        _bounces += 1
+        _bounces += 1;
         // STEP 1 -------------------------------------------------------------
 
         // This line sets the value of the text on screen to the word "Bounces"
@@ -64,28 +64,27 @@ public class Ball : MonoBehaviour
 
         // STEP 4 -------------------------------------------------------------
         // Uncomment the below line and fix it to SUBTRACT 0.1 from the value of 'g'.
-        g -= 0.1f
+        g -= 0.1f;
         // STEP 4 -------------------------------------------------------------
 
         if (g < 0.0f)
         {
             // STEP 5 ---------------------------------------------------------
             // Uncomment the below line and fix it to set the value of 'g' to ONE.
-            g = 1.0;
+            g = 1.0f;
             // STEP 5 ---------------------------------------------------------
         }
 
         // STEP 6 -------------------------------------------------------------
         // Below this comment, write a line of code to MULTIPLY 'b' by 1.2.
-        b*1.2;
-
+        b *= 1.2f;
         // STEP 6 -------------------------------------------------------------
 
         // STEP 7 -------------------------------------------------------------
         // Below this comment, write an IF STATEMENT:
         // IF the value of 'b' is GREATER THAN **OR** EQUAL TO 1.0,
         //      set 'b' to 0.1. 
-        if(b>=1.0)，b=0.1；
+        if (b >= 1.0f) b = 0.1f;
         // STEP 7 -------------------------------------------------------------
 
         // This line assigns a new color to your Ball with the new RGB values
@@ -104,9 +103,7 @@ public class Ball : MonoBehaviour
         // Below this comment, write 2 lines of code to ADD the values of 
         //      r, g, and b, and then divide the result by 3.
         // Store the result in a variable named 'brightness'.
-        float brightness=(r + g + b)/3;
-
-    
+        float brightness = (r + g + b) / 3;
         // STEP 8 -------------------------------------------------------------
 
         // STEP 9 -------------------------------------------------------------

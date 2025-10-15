@@ -92,84 +92,49 @@ public class CatW3 : MonoBehaviour
             ChangeColor(ball);
 
             // STEP 2 ---------------------------------------------------------
-            // Below this comment, CALL the method named DecreaseHealth.
-            // Notice this method's return type is void- that means we don't
-            //      have to store the result anywhere.
-            
-
+            DecreaseHealth();
             // STEP 2 ---------------------------------------------------------
 
             // STEP 6 ---------------------------------------------------------
-            // Write an IF STATEMENT below that does the following:
-            // IF the cat's health is below or equal to 0, AND
-            //      the _destroyCatWhenDead flag is true,
-            // then CALL the DestroyCat method.
-            //
-            // Try toggling the Destroy Cat When Dead setting on the Inspector,
-            //      and see how the cat is removed ONLY when it's checked!
-            
-
+            if (_health <= 0 && _destroyCatWhenDead)
+            {
+                DestroyCat();
+            }
             // STEP 6 ---------------------------------------------------------
         }
     }
 
     // STEP 3 -----------------------------------------------------------------
-    // This method decreases the player's health and updates the UI.
-    //
-    // Fill in the method BODY.
-    // You do NOT need to change the method signature (return or parameters).
-    //
-    // In this method:
-    // 1. Decrease the value of _health by one point.
-    // 2. Uncomment and fix the next line so that it change the value of
-    //      _healthText.text to display "health = " and the new value of _health.
-    //    '_healthText' is a TMP_Text Component, and 'text' is the variable that
-    //     decides the text that displays in the UI for this Component.
-    //      Hint: there's just one operator missing!
     private void DecreaseHealth()
     {
-        // write Step 3 below this comment!
-
+        _health -= 1f;
+        _healthText.text = "health = " + _health;
 
         // STEP 5 -------------------------------------------------------------
-        // Once you've finished Step 4, CALL the GetHealthSpeechText method
-        //      and store the result in _speechText's text variable.
-        // This will look very similar to the above line to change _healthText ;)
-
-
+        _speechText.text = GetHealthSpeechText();
         // STEP 5 -------------------------------------------------------------
     }
     // STEP 3 -----------------------------------------------------------------
 
     // STEP 4 -----------------------------------------------------------------
-    // This method decides what TEXT to display depending on how much health
-    //      the cat has left, to warn the player about low health.
-    //
-    // First, UNCOMMENT the method signature and brackets.
-    // Then, replace the ??? with the RETURN TYPE you think the method should use.
-    //
-    // Finally, fill out the method BODY. This method should:
-    // 1. IF the value of _health is less than HALF of _maxHealth,
-    //      return "OH NO!".
-    // 2. Otherwise, return "ouch".
-
-    //private ??? GetHealthSpeechText()
-    //{
-        // put the method body here!
-        
-    //}
-    
+    private string GetHealthSpeechText()
+    {
+        if (_health < _maxHealth * 0.5f)
+        {
+            return "OH NO!";
+        }
+        else
+        {
+            return "ouch";
+        }
+    }
     // STEP 4 -----------------------------------------------------------------
 
     // ------------------------------------------------------------------------
     private void ChangeColor(BallW3 ball)
     {
         // STEP 7 -------------------------------------------------------------
-        // Set the value of the _spriteRenderer's color variable to the value
-        //      of the ball's ballRenderer's color variable.
-        // This means you'll need to use the '.' twice to get to the color :)
-
-
+        _spriteRenderer.color = ball.ballRenderer.color;
         // STEP 7 -------------------------------------------------------------
     }
     
@@ -179,3 +144,4 @@ public class CatW3 : MonoBehaviour
         Destroy(gameObject);
     }
 }
+
