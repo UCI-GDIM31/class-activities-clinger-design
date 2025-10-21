@@ -19,7 +19,13 @@ Table 4
 //    return Mathf.Abs(expectedBeatTime - playerInputTime) <= 0.1f;
 //}
 //DidPlayerHitBeat(5.0f, 5.05f);   
-//DidPlayerHitBeat(5.0f, 5.25f);  
+//DidPlayerHitBeat(5.0f, 5.25f); 
+##W4
+## 5 Declaring new meber variable 
+##22 getting input from the player than moving them from the input 
+##25 read the object and move whatever game object you are calling it on
+
+ 
 
 =======
 Create future Devlog sub-headers with the three # symbols, then write your Devlogs below them.
