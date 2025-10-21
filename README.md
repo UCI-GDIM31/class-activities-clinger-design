@@ -11,6 +11,15 @@ It is an int because it is a whole number.
 The error you got after Step X of Part 2 told you something useful about why that line of code was broken- what was it?
 The line of code was broken because of the ;
 
+###W3
+Table 4
+//private bool DidPlayerHitBeat(float expectedBeatTime, float playerInputTime)
+//{
+//    return Mathf.Abs(expectedBeatTime - playerInputTime) <= 0.1f;
+//}
+//DidPlayerHitBeat(5.0f, 5.05f);   
+//DidPlayerHitBeat(5.0f, 5.25f);  
+
 
 ## Open-Source Assets
 ### W1
