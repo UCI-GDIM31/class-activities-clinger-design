@@ -4,6 +4,7 @@
 Hello World
 
 ### W2
+<<<<<<< HEAD
 Why are the r, g, and b variables floats instead of ints, bools, or strings?
 They are floats so the color changes can we more precise.
 Why is the _bounce variable an int instead of a float, bool, or string?
@@ -20,6 +21,9 @@ Table 4
 //DidPlayerHitBeat(5.0f, 5.05f);   
 //DidPlayerHitBeat(5.0f, 5.25f);  
 
+=======
+Create future Devlog sub-headers with the three # symbols, then write your Devlogs below them.
+>>>>>>> parent of c34b4bb (Merge branch 'main' of https://github.com/UCI-GDIM31/class-activities-clinger-design)
 
 ## Open-Source Assets
 ### W1
