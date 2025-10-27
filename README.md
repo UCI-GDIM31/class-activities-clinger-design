@@ -21,7 +21,7 @@ Table 4
 //DidPlayerHitBeat(5.0f, 5.05f);   
 //DidPlayerHitBeat(5.0f, 5.25f); 
 ##W4
-## 5 Declaring new meber variable 
+## table 4 -5 Declaring new meber variable 
 ##22 getting input from the player than moving them from the input 
 ##25 read the object and move whatever game object you are calling it on
 
