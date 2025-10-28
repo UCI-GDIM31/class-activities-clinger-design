@@ -22,7 +22,7 @@ public class SoccerBall : MonoBehaviour
     //
     // Also, uncomment and FIX the Debug.Log line.
 
-    private void OnCollisionEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         // finish STEP 1 by uncommenting and fixing the below line!
         Debug.Log("SoccerBall detected a collision with a trigger collider!");
@@ -34,7 +34,7 @@ public class SoccerBall : MonoBehaviour
         //
         // Then, move your Debug.Log() statement so that it's only called if
         //      the colliding object has the "Goal" tag.
-        If (other.CompareTag("Goal"))
+        if (other.CompareTag("Goal"))
         {
             MadeGoal();
         }
@@ -53,20 +53,21 @@ public class SoccerBall : MonoBehaviour
     // Once you've created MadeGoal,
     //      move your Debug.Log() statement into MadeGoal, and
     //      call MadeGoal from inside your if statement in OnTriggerEnter.
-    private void MadeGoal()
-    {
-        Debug.Log("SoccerBall detected a collison with a trigger collider!");
-    }
+   
         // STEP 4 -------------------------------------------------------------
         // _goalVFX is a ParticleSystem, a Component for creating VFX.
         // ParticleSystem has a method named Play() that displays the VFX:
         // https://docs.unity3d.com/6000.0/Documentation/ScriptReference/ParticleSystem.Play.html 
         //
         // Call Play on _goalVFX.
-        if (_goalVFX != null)
-        {
-            _goalVFX.Play();
-        }
+private void MadeGoal()
+{
+    Debug.Log("SoccerBall detected a collision with a trigger collider!");
+        
+    if (_goalVFX != null)
+    {
+        _goalVFX.Play();
+    }
 
         // STEP 4 -------------------------------------------------------------
     
@@ -113,6 +114,7 @@ public class SoccerBall : MonoBehaviour
     _timeSinceLastGoal = 0f;
     if (_timeText != null)
     {
-        _timeText.text = $"{timeSInceLastGoal:F2}s";
+        _timeText.text = $"{_timeSinceLastGoal:F2}s";
     }
+}
 }
